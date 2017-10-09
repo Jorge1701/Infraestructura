@@ -14,4 +14,4 @@ Todo lo probado en esta documentacion funciona instalando la distribucion de lin
 
 Con esto en mente, todos los archivos de *Instalar X*, asumen que se tiene Debian 9 y se esta loguado como usuario root. A la hora de que sea necesario ejecutar algun comando se indicara de la siguiente manera:
 
-`$ comando-a-ejecutar`
+`# comando-a-ejecutar`
