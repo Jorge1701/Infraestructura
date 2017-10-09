@@ -109,7 +109,7 @@ Con el siguiente comando:
 Agregar la siguiente linea al final
 > export PATH=/usr/local/apache2/bin/:$PATH
 
-Luego precionar `Ctl + O` y `Ctl + X` para terminar de editar.
+Luego precionar `Ctrl + O` y `Ctrl + X` para terminar de editar.
 
 Finalmente reiniciar el sistema operativo
 
