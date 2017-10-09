@@ -19,12 +19,11 @@ Luego movamonos al directorio del pcre para comenzar con su instalacion
 
 ## PCRE
 
-Para obtener el codigo fuente del PCRE vamos a la siguiente pagina (ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/) y obtenemos el link de uno de los archivos *pcre-x.xx.tar.gz* (*Nota: el archivo debe ser de **pcre** no de **pcre2***).
+Pagina con codigo fuente *ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/*.
 
-Como ejemplo utilizaremos el siguiente link *ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz*.
+Formato de archivo *pcre-x.xx.tar.gz*.
 
-Luego basta con ejecutar los siguientes comandos:
-
+Utilizado como ejemplo *ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz*.
 ```
 # wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz
 # tar zxvf pcre-8.38.tar.gz
@@ -33,7 +32,6 @@ Luego basta con ejecutar los siguientes comandos:
 # make
 # make install
 ```
-
 Luego nos movemos al directorio del APR para comenzar con su instalacion:
 
 `# cd ../apr`
@@ -41,12 +39,11 @@ Luego nos movemos al directorio del APR para comenzar con su instalacion:
 
 ## APR
 
-De la misma manera que hicimos con el PCRE obtenemos el link de un archivo *apr-x.x.x.tar.gz*, esta vez de esta pagina (http://www-us.apache.org/dist//apr/).
+Pagina con codigo fuente *http://www-us.apache.org/dist//apr/*.
 
-Como ejemplo se usara el siguiente *http://www-us.apache.org/dist//apr/apr-1.6.2.tar.gz*.
+Formato de archivo *apr-x.x.x.tar.gz*.
 
-A continuacion se ejecutan los siguiente comandos:
-
+Utilizado como ejemplo *http://www-us.apache.org/dist//apr/apr-1.6.2.tar.gz*.
 ```
 # wget http://www-us.apache.org/dist//apr/apr-1.6.2.tar.gz
 # tar zxvf apr-1.6.2.tar.gz
@@ -62,12 +59,11 @@ Luego nos movemos al directorio del APR-Utils para instalarlo:
 
 ## APR-Utils
 
-Aqui se hace lo mismo que en el APR, tomando un archivo de la misma pagina pero esta vez uno de los *apr-**util**-x.x.x.tar.gz*.
+Pagina con codigo fuente *http://www-us.apache.org/dist//apr/*.
 
-Como ejemplo (http://www-us.apache.org/dist//apr/apr-util-1.6.0.tar.gz).
+Formato de archivo *apr-**util**-x.x.x.tar.gz*.
 
-Luego:
-
+Utilizado como ejemplo *http://www-us.apache.org/dist//apr/apr-util-1.6.0.tar.gz*.
 ```
 # apt-get install libexpat1-dev
 # wget http://www-us.apache.org/dist//apr/apr-util-1.6.0.tar.gz
@@ -77,7 +73,6 @@ Luego:
 # make
 # make install
 ```
-
 Finalmente para instalar el apache
 
 `# cd ../httpd`
@@ -85,12 +80,12 @@ Finalmente para instalar el apache
 
 ## Instalar Apache2
 
-De la misma manera que antes, codigo fuente de aqui (http://www-us.apache.org/dist//httpd/) archivo *httpd-x.x.xx.tar.gz*.
+De la misma manera que antes, codigo fuente de aqui () archivo *httpd-x.x.xx.tar.gz*.
+Pagina con codigo fuente **.
 
-Como ejemplo *http://www-us.apache.org/dist//httpd/httpd-2.4.27.tar.gz*.
+Formato de archivo *httpd-x.x.xx.tar.gz*.
 
-Luego:
-
+Utilizado como ejemplo *http://www-us.apache.org/dist//httpd/httpd-2.4.27.tar.gz*.
 ```
 # wget http://www-us.apache.org/dist//httpd/httpd-2.4.27.tar.gz
 # tar zxvf httpd-2.4.27.tar.gz
