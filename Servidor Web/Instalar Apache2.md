@@ -71,7 +71,7 @@ Para instalar apache se debe de primero instalar PCRE, APR y APR-Utils en ese or
 ```
 
 
-## Para poder usarlo
+### Configuracion
 
 Con el siguiente comando:
 
@@ -81,13 +81,10 @@ Con el siguiente comando:
 
 `# reboot`
 
-
-## Como usarlo
-
-### Para iniciarlo
+#### Para iniciarlo
 
 `# apachectl -k start`
 
-### Para reiniciarlo
+#### Para reiniciarlo
 
 `# apachectl -k restart`
