@@ -27,10 +27,15 @@ $ make install
 # APR
 
 $ wget http://www-us.apache.org/dist//apr/apr-1.6.2.tar.gz
+
 $ tar -zxvf apr-1.6.2.tar.gz
+
 $ cd apr-1.6.2
+
 $ ./configure
+
 $ make
+
 $ make install
 
 # APR-Utils
