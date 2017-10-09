@@ -1,11 +1,6 @@
 # Dovecot
 
-Pagina con codigo fuente *https://dovecot.org/releases/2.2/*.
-
-Formato de archivo *dovecot-x.x.xx.tar.gz*.
-
-Utilizado como ejemplo *https://dovecot.org/releases/2.2/dovecot-2.2.32.tar.gz*.
-
+Pagina con codigo fuente *https://dovecot.org/releases/2.2/*
 ```
 # apt-get build-dep dovecot -y
 # wget https://dovecot.org/releases/2.2/dovecot-2.2.32.tar.gz
