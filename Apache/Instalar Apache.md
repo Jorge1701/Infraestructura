@@ -1,9 +1,7 @@
 # Apache2
 
 Si hay que ejecutar algun comando se demarcara de la siguiente manera:
-
-$ comando-a-ejecutar
-
+`$ comando-a-ejecutar`
 Para instalar apache se debe de primero instalar PCRE, APR y APR-Utils
 
 ## PCRE
