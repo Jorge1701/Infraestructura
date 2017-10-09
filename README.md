@@ -10,7 +10,7 @@
 
 ### Como leer esta documentacion:
 
-Todo lo probado en esta documentacion funciona instalando la distribucion de linux *Debian 9*, y configurandola como se muestra en el archivo *Configurar Debian 9*, esto no significa que no funcione en otras versiones de Debian u otras disctribuciones de linux, pero podrian haber comandos que no funcionen en las mismas.
+Todo lo probado en esta documentacion funciona instalando la distribucion de linux *Debian 9*, y configurandola como se muestra en el archivo *Configurar Debian 9*, esto **no significa** que no funcione en otras versiones de Debian u otras disctribuciones de linux, pero algunos comandos podrian no funcionar de la misma manera, o algunos archivos no estar hubicados en los mismos directorios.
 
 Con esto en mente, todos los archivos de *Instalar X*, asumen que se tiene Debian 9 y se esta loguado como usuario root. A la hora de que sea necesario ejecutar algun comando se presentara de la siguiente manera:
 
