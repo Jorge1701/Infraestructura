@@ -21,3 +21,10 @@
 # useradd -s /sbin/nologin -r dovecot
 # useradd -s /sbin/nologin -r dovenull
 ```
+### Para iniciar
+
+`# dovecot`
+
+### Para reiniciar
+
+`# dovecot reload`
