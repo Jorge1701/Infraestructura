@@ -1,6 +1,6 @@
 # Dovecot
 
-*https://dovecot.org/releases/2.2/*
+*https://dovecot.org/releases/*
 ```
 # apt-get build-dep dovecot -y
 # wget https://dovecot.org/releases/2.2/dovecot-2.2.32.tar.gz
