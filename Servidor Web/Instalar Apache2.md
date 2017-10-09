@@ -76,7 +76,9 @@ Para instalar apache se debe de primero instalar PCRE, APR y APR-Utils en ese or
 Con el siguiente comando:
 
 `# nano /root/.bashrc`
+
 > export PATH=/usr/local/apache2/bin/:$PATH
+
 `# reboot`
 
 
