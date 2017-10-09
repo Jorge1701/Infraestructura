@@ -1,11 +1,6 @@
 # Postfix
 
-Pagina con codigo fuente *http://linorg.usp.br/postfix/release/official/*.
-
-Formato de archivo *postfix-x.x.x.tar.gz*.
-
-Utilizado como ejemplo *http://linorg.usp.br/postfix/release/official/postfix-3.2.2.tar.gz*.
-
+*http://linorg.usp.br/postfix/release/official/*
 ```
 # apt-get build-dep postfix -y
 # wget http://linorg.usp.br/postfix/release/official/postfix-3.2.2.tar.gz
@@ -22,3 +17,11 @@ Utilizado como ejemplo *http://linorg.usp.br/postfix/release/official/postfix-3.
 # groupadd postdrop
 # useradd postfix -g postfix -s /bin/false
 ```
+
+### Para iniciar
+
+`# postfix start`
+
+### Para reiniciar
+
+`# postfix reload`
