@@ -80,8 +80,8 @@ Finalmente para instalar el apache
 
 ## Instalar Apache2
 
-De la misma manera que antes, codigo fuente de aqui () archivo *httpd-x.x.xx.tar.gz*.
-Pagina con codigo fuente **.
+
+Pagina con codigo fuente *http://www-us.apache.org/dist//httpd/*.
 
 Formato de archivo *httpd-x.x.xx.tar.gz*.
 
