@@ -1,4 +1,4 @@
-# Servidores en debian 9
+# Servidores en Debian 9
 
 ### En este repositorio se encontrara:
 
