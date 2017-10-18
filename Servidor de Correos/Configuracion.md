@@ -25,7 +25,7 @@ Luego ejecutar
 
 ### Configuracion
 
-Agregar al final de */etc/postfix/main.cf*
+Modificar o agregar los siguientes parametros en */etc/postfix/main.cf*
 ```
 myhostname = debian.tip.com.uy
 mydomain = tip.com.uy
