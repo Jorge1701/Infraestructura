@@ -2,7 +2,7 @@
 
 Como usuario root:
 
-`# nano /etc/apt/source.list`
+Agregar en */etc/apt/source.list*
 
 ``` bash
 # Contenido del archivo /etc/apt/source.list
