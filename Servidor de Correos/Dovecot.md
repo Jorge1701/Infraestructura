@@ -4,7 +4,7 @@
 ```
 # apt-get build-dep dovecot -y
 # wget https://dovecot.org/releases/2.2/dovecot-2.2.32.tar.gz
-# tar -zxvf dovecot-2.2.32.tar.gz
+# tar zxvf dovecot-2.2.32.tar.gz
 # cd dovecot-2.2.32
 # ./configure --sysconfdir=/etc --with-pam
 # make
