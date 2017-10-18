@@ -2,7 +2,7 @@
 
 ### Aliases
 
-Crear un archivo */etc/aliases* con el contenido:
+Crear un archivo */etc/aliases* con el contenido
 ```
 mailer-deamon: postmaster
 postmaster: root
@@ -63,8 +63,20 @@ Agregar en */etc/dovecot/conf.d/10-auth.conf*
 disable_plaintext_auth = no
 ```
 
+Editar */etc/dovecot/conf.d/10-master.conf*
+```
+service auth {
+   unix_listener /var/spool/postfix/private/auth {
+    mode = 0600
+    user = postfix
+    group = postfix
+  }
+}
+```
+
 ### Nombre del dominio
-Editar */etc/hosts* y agregar:
+
+Editar */etc/hosts*
 ```
 127.0.1.1 debian.tip.com.uy debian
 ```
