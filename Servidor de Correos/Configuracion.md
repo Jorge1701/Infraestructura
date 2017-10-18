@@ -1,5 +1,11 @@
 # Configuracion
 
+### Usuarios y grupos
+```
+# groupadd -g 5000 vmail
+# useradd -u 5000 -g vmail -s /usr/bin/nologin -d /home/vmail -m vmail
+```
+
 ### Aliases
 
 Crear un archivo */etc/aliases* con el contenido
@@ -71,6 +77,27 @@ service auth {
     user = postfix
     group = postfix
   }
+}
+```
+
+Crear archivo */etc/dovecot/passwd*, para los usuarios del servidor de correo, con el siguiente formato
+```
+usuario@tip.com.uy:{PLAIN}password
+usuario1@tip.com.uy:{PLAIN}u1
+usuario2@tip.com.uy:{PLAIN}u2
+usuario3@tip.com.uy:{PLAIN}u3
+```
+
+Editar */etc/dovecot/conf.d/auth-system.conf.ext*
+```
+passdb {
+   driver = passwd-file
+   args = /etc/dovecot/passwd
+}
+
+userdb{
+   driver = static
+   args = uid=vmail gid=vmail home=/home/vmail/%d/%n
 }
 ```
 
