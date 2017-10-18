@@ -26,3 +26,17 @@ deb-src http://deb.debian.org/debian/ stretch main
 `# apt-get update`
 
 `# apt-get install build-essential -y`
+
+### Tener IP Estatica
+
+Agregar en */etc/network/interfaces*
+
+```
+auto enp0s3
+iface enp0s3 inet static
+        address 192.168.1.125
+        gateway 192.168.1.1
+        network 192.168.1.0
+        netmask 255.255.255.0
+        broadcast 192.168.1.255
+```
