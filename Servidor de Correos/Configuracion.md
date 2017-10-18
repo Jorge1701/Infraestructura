@@ -23,6 +23,8 @@ Luego ejecutar
 
 `# newaliases`
 
+### Configuracion
+
 Agregar al final de */etc/postfix/main.cf*
 ```
 myhostname = debian.tip.com.uy
@@ -32,11 +34,33 @@ inet_protocols = all
 mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
 mynetworks_style = subnet
 mynetworks = 192.168.0.0/24, 127.0.0.0/8
+home_mailbox = Maildir/
 alias_maps = hash:/etc/aliases
 smtpd_sasl_type = dovecot
 smtpd_sasl_path = private/auth
 smtpd_sasl_auth_enable = yes
 smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
+```
+
+Agregar en */etc/dovecot/conf.d/10-mail.conf*
+```
+mail_location = maildir:~/Maildir
+```
+
+Agregar en */etc/dovecot/conf.d/20-pop3.conf*
+```
+pop3_uidl_format = %08Xu%08Xv
+pop3_client_workarounds = outlook-no-nuls
+```
+
+Agregar en */etc/dovecot/conf.d/20-imap.conf*
+```
+imap_client_workarounds = delay-newmail
+```
+
+Agregar en */etc/dovecot/conf.d/10-auth.conf*
+```
+disable_plaintext_auth = no
 ```
 
 ### Nombre del dominio
