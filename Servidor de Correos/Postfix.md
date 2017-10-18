@@ -1,11 +1,12 @@
 # Postfix
 
-*http://linorg.usp.br/postfix/release/official/*
+*ftp://ftp.reverse.net/pub/postfix/index.html*
+
 ```
 # apt-get build-dep postfix -y
-# wget http://linorg.usp.br/postfix/release/official/postfix-3.2.2.tar.gz
-# tar zxvf postfix-3.2.2.tar.gz
-# cd postfix-3.2.2
+# wget ftp://ftp.reverse.net/pub/postfix/official/postfix-3.2.3.tar.gz
+# tar zxvf postfix-3.2.3.tar.gz
+# cd postfix-3.2.3
 # make
 # make install
 ```
