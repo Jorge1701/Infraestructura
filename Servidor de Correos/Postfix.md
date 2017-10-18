@@ -8,15 +8,10 @@
 # tar zxvf postfix-3.2.3.tar.gz
 # cd postfix-3.2.3
 # make
-# make install
-```
-
-## Configuracion necesaria
-
-```
 # groupadd postfix
 # groupadd postdrop
 # useradd postfix -g postfix -s /bin/false
+# make install
 ```
 
 ### Para iniciar
