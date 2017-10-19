@@ -119,8 +119,7 @@ smtp      inet  n       -       n       -       -       smtpd -o content_filter=
 ```
 
 Luego ejecutar
-```	
-# mkdir /var/spool/filtro
+```
 # groupadd filtro
 # useradd -g filtro filtro
 # chown -R filtro:filtro /var/spool/filtro
