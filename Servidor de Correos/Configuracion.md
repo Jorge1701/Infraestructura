@@ -145,3 +145,11 @@ Editar */etc/hosts*
 ```
 127.0.1.1 debian.tip.com.uy debian
 ```
+
+### Aplicar cambios
+
+Hacer un reboot e iniciar los servidores con los comandos
+```
+# postfix start
+# dovecot
+```
