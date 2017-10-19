@@ -114,8 +114,10 @@ Luego ejecutar
 # useradd -g filtro filtro
 # chown -R filtro:filtro /var/spool/filtro
 # chown -R filtro:filtro /var/mail/filtro.sh
+# chown -R filtro:filtro /var/mail/data_loggin
 # chmod 777 /var/spool/filtro/filtro.sh
 # chmod 777 /var/mail/filtro.sh
+# chmod 777 /var/mail/data_loggin/
 ```
 
 Editar el archivo */etc/postfix/master.cf* (*NOTA: la segunda linea ya esta, falta agregarle el content_filter*).
