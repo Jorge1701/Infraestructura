@@ -153,3 +153,28 @@ Hacer un reboot e iniciar los servidores con los comandos
 # postfix start
 # dovecot
 ```
+
+### Probar
+
+Para hacer que se mande un mensaje *"Hola como estas"* desde el correo test@tip.com.uy al usuario1@tip.com.uy
+```
+# telnet localhost smtp
+# ehlo tip.com.uy
+# mail from: test@tip.com.uy
+# rcpt to: usuario1@tip.com.uy
+# data
+# Hola como estas
+# .
+# quit
+```
+
+Para luego ver este correo y eliminarlo iniciamos sesion con el usuario1
+```
+# telnet localhost pop3
+# user usuario1@tip.com.uy
+# pass u1
+# list
+# retr (numero del email)
+# dele (numero del email)
+# quit
+```
