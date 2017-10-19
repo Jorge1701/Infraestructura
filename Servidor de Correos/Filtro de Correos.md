@@ -25,13 +25,16 @@ cd $INSPECT_DIR || {
 cat >in.$$ || { 
     echo Cannot save mail to file; exit $EX_TEMPFAIL; }
 
-# Specify your content filter here.
-# filter <in.$$ || {
-#   echo Message content rejected; exit $EX_UNAVAILABLE; }
+./filtro.sh in.$$
 
 $SENDMAIL "$@" <in.$$
 
 exit $?
+```
+
+Crear un archivo */var/spool/filtro/filtro.sh* con el contenido
+```
+# Contenido
 ```
 
 Luego ejecutar
