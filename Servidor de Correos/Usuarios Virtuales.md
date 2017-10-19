@@ -86,20 +86,6 @@ Agregar en */etc/dovecot/conf.d/10-mail.conf*
 mail_location = maildir:/var/mail/vhosts/%d/%n
 ```
 
-> Quiza al pedo
-
-Agregar en */etc/dovecot/conf.d/20-pop3.conf*
-```
-pop3_uidl_format = %08Xu%08Xv
-pop3_client_workarounds = outlook-no-nuls
-```
-
-Agregar en */etc/dovecot/conf.d/20-imap.conf*
-```
-imap_client_workarounds = delay-newmail
-```
-> Hasta aca
-
 Agregar en */etc/dovecot/conf.d/10-auth.conf*
 ```
 disable_plaintext_auth = no
@@ -120,7 +106,7 @@ Editar */etc/dovecor/conf.d/auth-passwdfile.conf.ext*
 ```
 passdb {
    driver = passwd-file
-   args = username_format=%u /etc/dovecot/users
+   args = username_format=%u /etc/dovecot/passwd
 }
 
 userdb {
