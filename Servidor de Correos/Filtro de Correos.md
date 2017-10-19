@@ -101,7 +101,7 @@ do
 
 done < mail.txt
 
-fecha=$(date "+%d_%m_%y-%H_%M_%S")
+fecha=$(date "+%d_%m_%Y-%H_%M_%S")
 
 if [[ $subjectOK == "yes" && $bodyOK == "yes" ]]
 then
