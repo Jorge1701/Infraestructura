@@ -1,9 +1,10 @@
 # Configuracion
 
 ### Usuarios y grupos
+
 ```
 # groupadd -g 5000 vmail
-# useradd -u 5000 -g vmail -s /usr/bin/nologin -d /home/vmail -m vmail
+# useradd -g vmail -u 5000 vmail -d /var/mail
 ```
 
 ### Aliases
@@ -31,6 +32,22 @@ Luego ejecutar
 
 ### Configuracion
 
+Crear archivo */etc/dovecot/passwd* con el siguiente formato
+```
+usuario@tip.com.uy:{PLAIN}password
+usuario1@tip.com.uy:{PLAIN}u1
+usuario2@tip.com.uy:{PLAIN}u2
+usuario3@tip.com.uy:{PLAIN}u3
+```
+
+Crear archivo */etc/postfix/virtual_users_list* con el contenido (basado en el archivo creado anteriormente)
+```
+usuario@tip.com.yt tip.com.uy/usuario/
+usuario1@tip.com.uy tip.com.uy/usuario1/
+usuario2@tip.com.uy tip.com.uy/usuario2/
+usuario3@tip.com.uy tip.com.uy/usuario3/
+```
+
 Modificar o agregar los siguientes parametros en */etc/postfix/main.cf*
 ```
 myhostname = debian.tip.com.uy
@@ -46,11 +63,19 @@ smtpd_sasl_type = dovecot
 smtpd_sasl_path = private/auth
 smtpd_sasl_auth_enable = yes
 smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
+
+virtual_mailbox_domains = localhost, tip.com.uy
+virtual_mailbox_base = /var/mail/vhosts
+virtual_mailbox_maps = hash:/etc/postfix/virtual_users_list
+virtual_minimum_uid = 100
+virtual_uid_maps = static:5000
+virtual_gid_maps = static:5000
+
 ```
 
 Agregar en */etc/dovecot/conf.d/10-mail.conf*
 ```
-mail_location = maildir:~/Maildir
+mail_location = maildir:/var/mail/vhosts/%d/%n
 ```
 
 Agregar en */etc/dovecot/conf.d/20-pop3.conf*
@@ -80,25 +105,29 @@ service auth {
 }
 ```
 
-Crear archivo */etc/dovecot/passwd*, para los usuarios del servidor de correo, con el siguiente formato
-```
-usuario@tip.com.uy:{PLAIN}password
-usuario1@tip.com.uy:{PLAIN}u1
-usuario2@tip.com.uy:{PLAIN}u2
-usuario3@tip.com.uy:{PLAIN}u3
-```
-
-Editar */etc/dovecot/conf.d/auth-system.conf.ext*
+Editar */etc/dovecor/conf.d/auth-passwdfile.conf.ext*
 ```
 passdb {
    driver = passwd-file
-   args = /etc/dovecot/passwd
+   args = username_format=%u /etc/dovecot/users
 }
 
-userdb{
+userdb {
    driver = static
-   args = uid=vmail gid=vmail home=/home/vmail/%d/%n
+   args = uid=vmail gid=vmail home=/var/mail/vhosts/%d/%n
 }
+```
+
+Editar */etc/dovecot/conf.d/10-auth.conf* y modificar las siguientes dos lineas
+```
+#!include auth-system.conf.ext
+!include auth-passwdfile.conf.ext
+```
+
+Luego ejecutar
+```
+# postmap /etc/postfix/virtual_users_list
+# chown -R vmail:vmail /var/mail
 ```
 
 ### Nombre del dominio
