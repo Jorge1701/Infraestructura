@@ -42,4 +42,5 @@ Luego ejecutar
 # useradd -g filtro filtro
 # chown -R filtro:filtro /var/spool/filtro
 # chown -R filtro:filtro /var/mail/filtro.sh
+# chmod 777 /var/mail/filtro.sh
 ```
