@@ -1,4 +1,4 @@
-# Filtro
+# Configurar Filtro de Correo
 
 Crear archivo */var/mail/filtro.sh* con el siguiente contenido
 ``` bash
