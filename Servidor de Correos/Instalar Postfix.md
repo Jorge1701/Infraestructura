@@ -1,6 +1,6 @@
 # Postfix
 
-*NOTA: Instalar primero el Dovecot antes de instalar Postfix*
+*NOTA: Instalar primero Dovecot antes de instalar Postfix*
 
 *ftp://ftp.reverse.net/pub/postfix/index.html*
 
