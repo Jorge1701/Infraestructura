@@ -36,6 +36,8 @@ Crear un archivo */var/spool/filtro/filtro.sh* con el contenido
 ``` bash
 #!/bin/bash
 
+rm mail.txt
+
 while read -r line
 do
    echo "$line" >> mail.txt
@@ -56,6 +58,7 @@ do
                 if [[ $linea == *"Tecnologo en Informatica"* ]]
                 then
                         bodyOK="yes"
+                        break
                 fi
         fi
 
@@ -98,26 +101,14 @@ do
 
 done < mail.txt
 
+fecha=$(date "+%d_%m_%y-%H_%M_%S")
+
 if [[ $subjectOK == "yes" && $bodyOK == "yes" ]]
 then
-        mv mail.txt /home/pecu/data_loggin/$from,$to.txt
+        mv mail.txt /var/mail/data_loggin/$fecha-$from-$to.txt
 else
         rm mail.txt
 fi
-```
-
-Luego ejecutar
-
-```
-# mkdir /var/spool/filtro
-# groupadd filtro
-# useradd -g filtro filtro
-# chown -R filtro:filtro /var/spool/filtro
-# chown -R filtro:filtro /var/mail/filtro.sh
-# chown -R filtro:filtro /var/mail/data_loggin
-# chmod 777 /var/spool/filtro/filtro.sh
-# chmod 777 /var/mail/filtro.sh
-# chmod 777 /var/mail/data_loggin/
 ```
 
 Editar el archivo */etc/postfix/master.cf* (*NOTA: la segunda linea ya esta, falta agregarle el content_filter*).
