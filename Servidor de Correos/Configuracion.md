@@ -84,6 +84,8 @@ Agregar en */etc/dovecot/conf.d/10-mail.conf*
 mail_location = maildir:/var/mail/vhosts/%d/%n
 ```
 
+> Quiza al pedo
+
 Agregar en */etc/dovecot/conf.d/20-pop3.conf*
 ```
 pop3_uidl_format = %08Xu%08Xv
@@ -94,6 +96,7 @@ Agregar en */etc/dovecot/conf.d/20-imap.conf*
 ```
 imap_client_workarounds = delay-newmail
 ```
+> Hasta aca
 
 Agregar en */etc/dovecot/conf.d/10-auth.conf*
 ```
