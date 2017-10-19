@@ -1,16 +1,21 @@
 #!/bin/bash
 
-postfix start
-dovecot
-
 NOMBREUSUARIO=$USER
 NOMBREDELSERVIDOR=$(hostname)
 HORA=$(date '+%d/%m/%y %H:%M:%S')
 
-desde="eventos_mailserver"
-para="admin"
-dominio="tip.com.uy"
-subject="Subject: $NOMBREDELSERVIDOR, Nuevo inicio de sesion."
-mensaje="El usuario $NOMBREUSUARIO a iniciado remotamente al servidor $NOMBREDELSERVIDOR a las $HORA"
+{
+postfix start
+dovecot
 
-echo -e "ehlo $dominio\nmail from: $desde@$dominio\nrcpt to: $para@$dominio\ndata\n$subject\n$mensaje\n.\nquit\n" | nc localhost smtp
+nc localhost smtp << EOF
+ehlo tip.com.uy
+mail from: eventos_mailserver@tip.com.uy
+rcpt to: admin@tip.com.uy
+data
+Subject: $NOMBREDELSERVIDOR, Nuevo inicio de sesion.
+El usuario $NOMBREUSUARIO a iniciado remotamente al servidor $NOMBREDELSERVIDOR a las $HORA
+.
+quit
+EOF
+} &> /dev/null
