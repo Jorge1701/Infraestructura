@@ -44,3 +44,10 @@ Luego ejecutar
 # chown -R filtro:filtro /var/mail/filtro.sh
 # chmod 777 /var/mail/filtro.sh
 ```
+
+Editar el archivo */etc/postfix/master.cf* (*NOTA: la segunda linea ya esta, falta agregarle el content_filter*).
+```
+filtro unix - n n - 10 pipe flags=Rq user=filtro null_sender= argv=/var/mail/filtro.sh -f ${sender} -- ${recipient}
+
+smtp      inet  n       -       n       -       -       smtpd -o content_filter=filtro:filtro
+```
