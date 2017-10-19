@@ -117,3 +117,22 @@ filtro unix - n n - 10 pipe flags=Rq user=filtro null_sender= argv=/var/mail/fil
 
 smtp      inet  n       -       n       -       -       smtpd -o content_filter=filtro:filtro
 ```
+
+Luego ejecutar
+```	
+# mkdir /var/spool/filtro
+# groupadd filtro
+# useradd -g filtro filtro
+# chown -R filtro:filtro /var/spool/filtro
+# chown -R filtro:filtro /var/mail/filtro.sh
+# chown -R filtro:filtro /var/mail/data_loggin
+# chmod 777 /var/spool/filtro/filtro.sh
+# chmod 777 /var/mail/filtro.sh
+# chmod 777 /var/mail/data_loggin/
+```
+
+### Aplicar cambios
+```
+# postfix reload
+# dovecot reload
+```
