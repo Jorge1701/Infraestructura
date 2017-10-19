@@ -1,4 +1,4 @@
-# Configuracion
+# Usuarios Virtuales
 
 Con esta configuracion el dominio del servidor sera *tip.com.uy* (ej. correo@tip.com.uy).
 
