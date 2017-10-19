@@ -1,5 +1,7 @@
 # Postfix
 
+*NOTA: Instalar primero el Dovecot antes de instalar Postfix*
+
 *ftp://ftp.reverse.net/pub/postfix/index.html*
 
 ```
