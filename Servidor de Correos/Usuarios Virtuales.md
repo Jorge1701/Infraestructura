@@ -2,6 +2,8 @@
 
 Con esta configuracion el dominio del servidor sera *tip.com.uy* (ej. correo@tip.com.uy).
 
+La estructura donde estaran los emails sera, dentro de */var/vmail/vhosts/tip.com.uy/* habra un directorio por cada usuario (ej. /var/vmail/vhosts/tip.com.uy/usuario1), dentro de cada directorios de usuario el servidor de correo creara los directorios *cur*, *new* y *tmp*, para manejar los correos de cada usuario.
+
 ### Usuarios y grupos
 
 ```
