@@ -1,3 +1,7 @@
+# Script 1
+
+Crear el script */var/mail/mandarCorreo.sh* con el contenido
+``` bash
 #!/bin/bash
 
 NOMBREUSUARIO=$USER
@@ -19,3 +23,4 @@ El usuario $NOMBREUSUARIO a iniciado remotamente al servidor $NOMBREDELSERVIDOR 
 quit
 EOF
 } &> /dev/null
+```
