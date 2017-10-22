@@ -13,8 +13,12 @@
 
 ### Configuracion
 
-`# nano /root/.bashrc`
+Agregar en */root/.bashrc*
 
-> export PATH=/usr/local/samba/bin/:/usr/local/samba/sbin/:$PATH
+```
+export PATH=/usr/local/samba/bin/:/usr/local/samba/sbin/:$PATH
+```
+
+Luego 
 
 `# reboot`
