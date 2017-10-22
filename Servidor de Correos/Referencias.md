@@ -3,3 +3,6 @@ https://www.linode.com/docs/email/postfix/troubleshooting-problems-with-postfix-
 
 ### Mandar correo usando nc con un script bash
 https://www.computerhope.com/unix/nc.htm
+
+### Utilizar filtros de mails
+http://www.postfix.org/FILTER_README.html
