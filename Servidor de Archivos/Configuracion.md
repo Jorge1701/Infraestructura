@@ -14,3 +14,7 @@ Crear archivo */usr/local/samba/etc/smb.conf* con el contenido
 	read only = no
 	guest ok = yes
 ```
+
+### Aplicar cambios
+
+Iniciar el servicio o reiniciarlo
