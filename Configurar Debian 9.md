@@ -23,9 +23,12 @@ deb http://deb.debian.org/debian/ stretch main
 deb-src http://deb.debian.org/debian/ stretch main
 ```
 
-`# apt-get update`
+Luego ejecutar:
 
-`# apt-get install build-essential -y`
+```
+# apt-get update
+# apt-get install build-essential -y
+```
 
 ### Tener IP Estatica
 
