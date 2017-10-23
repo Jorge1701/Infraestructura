@@ -9,9 +9,6 @@ NOMBREDELSERVIDOR=$(hostname)
 HORA=$(date '+%d/%m/%y %H:%M:%S')
 
 {
-postfix start
-dovecot
-
 nc localhost smtp << EOF
 ehlo tip.com.uy
 mail from: eventos_mailserver@tip.com.uy
