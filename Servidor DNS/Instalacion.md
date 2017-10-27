@@ -6,7 +6,6 @@
 # tar zxvf openldap-2.4.45.tgz
 # cd openldap-2.4.45
 # ./configure
-# make depend
 # make
 # make install
 
@@ -14,7 +13,7 @@
 # wget https://www.isc.org/downloads/file/bind-9-10-6/?version=tar-gz
 # tar zxvf index.html\?version\=tar-gz
 # cd bind-9.10.6/
-# ./configure --prefix=/usr --sysconfdir=/etc --enable-threads --localstatedir=/var/state --with-libtool
+# ./configure
 # make
 # make install
 ```
