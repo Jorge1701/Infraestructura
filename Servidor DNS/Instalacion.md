@@ -6,7 +6,9 @@
 # tar zxvf openldap-2.4.45.tgz
 # cd openldap-2.4.45
 # ./configure
+# make depend
 # make
+# make test
 # make install
 
 # apt-get build-dep bind9 -y
