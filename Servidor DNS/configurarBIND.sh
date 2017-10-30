@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "---"
-
 echo "Borrando configuracion anterior..."
 
 rm /etc/namedb/*
