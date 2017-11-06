@@ -29,6 +29,12 @@ CARGAR ARCHIVO:	ldapadd -x -D "cn=Manager,dc=tip,dc=com,dc=uy" -W -f /usr/local/
 ################################################################################################################################
 PASOS PARA LA CREACION DE LA ESTRUCTURA DE LA BD
 
+0) Editar /etc/openldap/ldap.conf
+
+BASE dc=infraestructura,dc=com,dc=uy
+
+URI ldap://192.168.10.189
+
 1) Copiar todos los archivos en la carpeta de instalacion de openLDAP (/usr/local/etc/openldap)
 Asegurarse de que no queden espacios al final de la linea, esto genera el error 'invalid syntax'
 
