@@ -1,3 +1,12 @@
+
+
+/etc/openldap/ldap.conf
+```
+BASE dc=infraestructura,dc=com,dc=uy
+
+URI ldap://192.168.10.189
+```
+
 /etc/openldap/slapd.ldif
 ```
 dn: cn=config
