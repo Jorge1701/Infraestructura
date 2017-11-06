@@ -1,0 +1,9 @@
+dn: dc=infraestructura,dc=com,dc=uy
+objectclass: dcObject
+objectclass: organization
+o: Infraestructura
+dc: infraestructura
+
+dn: cn=Manager,dc=infraestructura,dc=com,dc=uy
+objectclass: organizationRole
+cn: Manager
