@@ -1,0 +1,19 @@
+dn: ou=correo,dc=infraestructura,dc=com,dc=uy
+objectClass: organizationalUnit
+ou: correo
+
+dn: ou=dovecot,ou=correo,dc=infraestructura,dc=com,dc=uy
+objectClass: organizationalUnit
+ou: dovecot
+
+dn: ou=postfix,ou=correo,dc=infraestructura,dc=com,dc=uy
+objectClass: organizationalUnit
+ou: postfix
+
+dn: ou=web,dc=infraestructura,dc=com,dc=uy
+objectClass: organizationalUnit
+ou: web
+
+dn: ou=archivos,dc=infraestructura,dc=com,dc=uy
+objectClass: organizationalUnit
+ou: archivos
