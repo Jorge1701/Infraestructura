@@ -1,5 +1,3 @@
-
-
 /etc/openldap/ldap.conf
 ```
 BASE dc=infraestructura,dc=com,dc=uy
@@ -12,9 +10,6 @@ URI ldap://192.168.10.189
 dn: cn=config
 objectClass: olcGlobal
 cn: config
-
-olcArgsFile: /usr/local/var/run/slapd.args
-olcPidFile: /usr/local/var/run/slapd.pid
 
 dn: cn=schema,cn=config
 objectClass: olcSchemaConfig
