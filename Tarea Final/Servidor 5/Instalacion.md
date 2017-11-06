@@ -8,6 +8,5 @@
 # ./configure --sysconfdir=/etc
 # make depend
 # make
-# make test
 # make install
 ```
