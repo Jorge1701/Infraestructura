@@ -71,3 +71,8 @@ olcRootPW: secret
 olcDbDirectory: /usr/local/var/openldap-data
 olcDbIndex: objectClass eq
 ```
+
+Ejecutar
+```
+# ldapadd -x -D "cn=Manager,dc=infraestructura,dc=com,dc=uy" -W -f estructuraBase.ldif
+```
