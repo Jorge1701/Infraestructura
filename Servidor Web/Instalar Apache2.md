@@ -24,7 +24,7 @@ Para instalar apache se debe de primero instalar PCRE, APR y APR-Utils en ese or
 # make install
 ```
 
-`# cd ../apr`
+`# cd ../../apr`
 
 
 ## APR
@@ -39,7 +39,7 @@ Para instalar apache se debe de primero instalar PCRE, APR y APR-Utils en ese or
 # make install
 ```
 
-`# cd ../apr-utils`
+`# cd ../../apr-utils`
 
 
 ## APR-Utils
@@ -55,7 +55,7 @@ Para instalar apache se debe de primero instalar PCRE, APR y APR-Utils en ese or
 # make install
 ```
 
-`# cd ../httpd`
+`# cd ../../httpd`
 
 
 ## Instalar Apache2
