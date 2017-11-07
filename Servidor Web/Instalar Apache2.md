@@ -31,9 +31,9 @@ Para instalar apache se debe de primero instalar PCRE, APR y APR-Utils en ese or
 
 *http://www-us.apache.org/dist//apr/*
 ```
-# wget http://www-us.apache.org/dist//apr/apr-1.6.2.tar.gz
-# tar zxvf apr-1.6.2.tar.gz
-# cd apr-1.6.2
+# wget http://www-us.apache.org/dist//apr/apr-1.6.3.tar.gz
+# tar zxvf apr-1.6.3.tar.gz
+# cd apr-1.6.3
 # ./configure
 # make
 # make install
@@ -47,9 +47,9 @@ Para instalar apache se debe de primero instalar PCRE, APR y APR-Utils en ese or
 *http://www-us.apache.org/dist//apr/*
 ```
 # apt-get install libexpat1-dev
-# wget http://www-us.apache.org/dist//apr/apr-util-1.6.0.tar.gz
-# tar zxvf apr-util-1.6.0.tar.gz
-# cd apr-util-1.6.0
+# wget http://www-us.apache.org/dist//apr/apr-1.6.3.tar.gz
+# tar zxvf apr-util-1.6.3.tar.gz
+# cd apr-util-1.6.3
 # ./configure --with-apr=/usr/local/apr
 # make
 # make install
