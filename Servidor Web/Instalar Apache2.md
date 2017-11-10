@@ -62,10 +62,10 @@ Para instalar apache se debe de primero instalar PCRE, APR y APR-Utils en ese or
 
 *http://www-us.apache.org/dist//httpd/*
 ```
-# wget http://www-us.apache.org/dist//httpd/httpd-2.2.34.tar.gz
-# tar zxvf httpd-2.2.34.tar.gz
-# cd httpd-2.2.34
-# ./configure --enable-ldap=shared --enable-authnz-ldap=shared --enable-lua=shared
+# wget http://www-eu.apache.org/dist//httpd/httpd-2.4.29.tar.gz
+# tar zxvf httpd-2.4.29.tar.gz
+# cd httpd-2.4.29
+# ./configure
 # make
 # make install
 ```
