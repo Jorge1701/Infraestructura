@@ -1,5 +1,7 @@
 #!/bin/bash
 
+apt-get update
+apt-get install build-essential -y
 apt-get build-dep apache2 -y
 
 mkdir apache2
