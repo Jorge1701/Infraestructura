@@ -16,9 +16,9 @@ Para instalar apache se debe de primero instalar PCRE, APR y APR-Utils en ese or
 
 *ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/*
 ```
-# wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz
-# tar zxvf pcre-8.38.tar.gz
-# cd pcre-8.38
+# wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.41.tar.gz
+# tar zxvf pcre-8.41.tar.gz
+# cd pcre-8.41
 # ./configure
 # make
 # make install
