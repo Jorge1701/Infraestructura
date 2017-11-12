@@ -1,12 +1,8 @@
 #!/bin/bash
 
-# Cargar variables de entorno
-export PATH=/usr/local/apache2/bin/:$PATH
-export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-
 # Hacer que las variables de entorno se carguen cada vez que se inicie el sistema
-echo "export PATH=/usr/local/apache2/bin/:$PATH" >> /root/.bashrc
-echo "export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH" >> /root/.bashrc
+echo "export PATH=/usr/local/apache2/bin/:\$PATH" >> /root/.bashrc
+echo "export LD_LIBRARY_PATH=/usr/local/lib:\$LD_LIBRARY_PATH" >> /root/.bashrc
 
 # Agregar lineas necesarias en httpd.conf
 echo "LoadModule ldap_module modules/mod_ldap.so" >> /usr/local/apache2/conf/httpd.conf
@@ -54,3 +50,11 @@ mv *.s /srv/www/www.servidores.com.uy/cgi-bin/
 mv index.html /srv/www/www.servidores.com.uy/
 mv ultimo_login.sh /srv/www/www.servidores.com.uy/cgi-bin/
 mv sitios.conf /usr/local/apache2/conf/
+
+# Permisos
+chmod 777 /srv/www/www.servidores.com.uy/
+chmod 777 /srv/www/www.servidores.com.uy/*
+chmod 777 /srv/www/www.servidores.com.uy/cgi-bin/
+chmod 777 /srv/www/www.servidores.com.uy/cgi-bin/*
+
+reboot
