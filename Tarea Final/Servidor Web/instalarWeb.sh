@@ -2,7 +2,6 @@
 
 apt-get update -y
 apt-get install build-essential -y
-apt-get build-dep apache2 -y
 
 mkdir apache2
 mkdir apache2/pcre
@@ -30,7 +29,7 @@ make install
 
 cd ../../apr-utils
 
-apt-get install libexpat1-dev -y
+apt-get install libexpat1-dev libldap2-dev -y
 wget http://www-eu.apache.org/dist//apr/apr-util-1.6.1.tar.gz
 tar zxvf apr-util-1.6.1.tar.gz
 cd apr-util-1.6.1
@@ -43,6 +42,6 @@ cd ../../httpd
 wget http://www-us.apache.org/dist//httpd/httpd-2.4.29.tar.gz
 tar zxvf httpd-2.4.29.tar.gz
 cd httpd-2.4.29
-./configure
+./configure --enable-ldap=shared --enable-authnz-ldap=shared 
 make
 make install
