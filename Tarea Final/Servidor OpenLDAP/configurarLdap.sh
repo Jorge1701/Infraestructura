@@ -57,7 +57,7 @@ mkdir /etc/slapd.d
 /usr/local/sbin/slapadd -n 0 -F /etc/slapd.d -l $path"slapd.ldif"
 
 #Iniciar openldap
-/usr/local/libexec/slapd -F /usr/local/etc/slapd.d
+/usr/local/libexec/slapd -F /etc/slapd.d
 
 #Crear estructura base
 echo "dn: dc=infraestructura,dc=com,dc=uy" > $path"base.ldif"
