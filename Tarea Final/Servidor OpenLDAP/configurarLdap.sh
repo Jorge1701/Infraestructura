@@ -6,7 +6,7 @@ path="/etc/openldap/"
 
 #Configurar en que ip quedara funcionando el servidor y su estructura base
 echo "BASE dc=infraestructura,dc=com,dc=uy" > $path"ldap.conf"
-echo "ldap://$ip" >> $path"ldap.conf"
+echo "URI ldap://$ip" >> $path"ldap.conf"
 
 
 #Configurar base de datos y estructura en slapd.conf
