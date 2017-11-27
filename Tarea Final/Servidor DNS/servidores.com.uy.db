@@ -1,0 +1,15 @@
+$TTL    604800
+@       IN      SOA     ns.servidores.com.uy. root.servidores.com.uy. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+        NS ns           ; debian server
+        MX 10 ns        ; mail exchanger
+
+ns      A        192.168.10.65
+
+servidores.com.uy      IN      CNAME   ns
+www     IN      A       192.168.10.123
