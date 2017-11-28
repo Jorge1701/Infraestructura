@@ -57,6 +57,18 @@ echo "default_pass_scheme = SSHA" >> "$dl"
 
 mc=/etc/dovecot/conf.d/10-mail.conf
 
+mail_location = maildir:/var/vmail/%d/%u
+namespace inbox {
+  inbox = yes
+}
+
+mail_uid = 198
+mail_gid = 8
+mail_privileged_group = mail
+mail_access_groups = mail
+first_valid_uid = 198
+
+
 echo "mail_location = maildir:/var/vmail/%d/%u" >> "$mc"
 echo "mail_uid = $uidUsuario" >> "$mc"
 echo "mail_gid = 8" >> "$mc"
