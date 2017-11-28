@@ -4,19 +4,12 @@ uidUsuario=4321
 
 useradd -u $uidUsuario vmail -g mail -s /sbin/nologin -d /var/vmail
 
-virtual_mailbox_base            = /var/vmail
-virtual_minimum_uid             = 100
-virtual_uid_maps                = static:198
-virtual_gid_maps                = static:8
-
-#################################################
-virtual_mailbox_domains         = proxy:ldap:$config_directory/ldap_virtual_domains_maps.cf
-virtual_mailbox_maps            = hash:/etc/postfix/mailboxes,proxy:ldap:$config_directory/ldap_virtual_mailbox_maps.cf
-virtual_alias_maps              = proxy:ldap:$config_directory/ldap_virtual_alias_maps.cf
-
-## CAMBIA ESTO ALE P ( p de puto )
+echo "virtual_mailbox_base            = /var/vmail" >> /etc/postfix/main.cf
+echo "virtual_minimum_uid             = 100" >> /etc/postfix/main.cf
+echo "virtual_uid_maps                = static:$uidUsuario" >> /etc/postfix/main.cf
+echo "virtual_gid_maps                = static:8" >> /etc/postfix/main.cf
 echo "virtual_mailbox_domains         = proxy:ldap:\$config_directory/ldap_virtual_domains_maps.cf" >> /etc/postfix/main.cf
-echo "virtual_mailbox_maps            = proxy:ldap:\$config_directory/ldap_virtual_mailbox_maps.cf" >> /etc/postfix/main.cf
+echo "virtual_mailbox_maps            = hash:/etc/postfix/mailboxes,proxy:ldap:\$config_directory/ldap_virtual_mailbox_maps.cf" >> /etc/postfix/main.cf
 echo "virtual_alias_maps              = proxy:ldap:\$config_directory/ldap_virtual_alias_maps.cf" >> /etc/postfix/main.cf
 
 d=/etc/postfix/ldap_virtual_domains_maps.cf
