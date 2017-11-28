@@ -72,3 +72,6 @@ echo "    user = postfix" >> "$master"
 echo "    group = postfix" >> "$master"
 echo "  }" >> "$master"
 echo "}" >> "$master"
+
+echo "log_path = /var/log/dovecot.log" >> /etc/dovecot/dovecot.conf
+echo "info_log_path = /var/log/dovecot-info.log" >> /etc/dovecot/dovecot.conf
