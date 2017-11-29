@@ -1,5 +1,7 @@
 #!/bin/bash
 
+apt-get update
+apt-get install build-essential -y
 apt-get build-dep dovecot -y
 apt-get build-dep postfix -y
 apt-get install libldap2-dev -y
