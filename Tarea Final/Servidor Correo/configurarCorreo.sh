@@ -2,7 +2,9 @@
 
 uidUsuario=4321
 
+mkdir /var/vmail
 useradd -u $uidUsuario vmail -g mail -s /sbin/nologin -d /var/vmail
+chown -R vmail:mail /var/vmail
 
 echo "virtual_mailbox_base            = /var/vmail" >> /etc/postfix/main.cf
 echo "virtual_minimum_uid             = 100" >> /etc/postfix/main.cf
