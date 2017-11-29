@@ -3,6 +3,14 @@
 apt-get build-dep dovecot -y
 apt-get build-dep postfix -y
 apt-get install libldap2-dev -y
+apt-get install curl -y
+
+echo "#!/bin/bash" >> /etc/profile.d/login.sh
+echo "" >> /etc/profile.d/login.sh
+echo "u=\$LOGNAME" >> /etc/profile.d/login.sh
+echo "h=\$(date +%d/%m/%Y-%H:%M)" >> /etc/profile.d/login.sh
+echo "" >> /etc/profile.d/login.sh
+echo "curl \"www.servidores.com.uy/cgi-bin/ultimo_login.sh?servidor=mail&usuario=\$u&hora=\$h\"" >> /etc/profile.d/login.sh
 
 # Instalar Dovecot
 wget https://dovecot.org/releases/2.2/dovecot-2.2.33.tar.gz
@@ -30,5 +38,4 @@ groupadd postdrop
 useradd postfix -g postfix -s /bin/false
 make
 make install
-
 # 17
