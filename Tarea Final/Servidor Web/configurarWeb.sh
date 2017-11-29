@@ -45,6 +45,8 @@ do
         done < "$i"
 done
 
+echo "<centrar><h1 style=\"margin: 100px\">Bienvenido!</h1></centrar>" > /srv/www/www.infraestructura.com.uy/index.html
+
 # Mover los archivos a los lugares correspondientes
 mv *.s /srv/www/www.servidores.com.uy/cgi-bin/
 mv index.html /srv/www/www.servidores.com.uy/
