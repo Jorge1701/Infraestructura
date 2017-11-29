@@ -88,3 +88,5 @@ echo "log_path = /var/log/dovecot.log" >> /etc/dovecot/dovecot.conf
 echo "info_log_path = /var/log/dovecot-info.log" >> /etc/dovecot/dovecot.conf
 
 echo "lda_mailbox_autocreate = yes" >> /etc/dovecot/conf.d/15-lda.conf
+
+echo "Configurado correctamente, No olvides agregar cada usuario con el script agregarUsuario.sh"
