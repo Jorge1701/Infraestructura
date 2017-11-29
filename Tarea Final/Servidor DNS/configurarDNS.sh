@@ -1,13 +1,12 @@
 #!/bin/bash
 
-echo "Borrando configuracion anterior..."
+echo "key \"rndc-key\" {" > /etc/rndc.key
+echo "        algorithm hmac-md5;" >> /etc/rndc.key
+echo "        secret "DTngw5O8I5Axx631GjQ9pA==";" >> /etc/rndc.key
+echo "};" >> /etc/rndc.key
 
 rm /etc/namedb/*
 rm /etc/named.conf
-
-echo ""
-
-echo "Creando named.conf (...)"
 
 n="/etc/named.conf"
 
