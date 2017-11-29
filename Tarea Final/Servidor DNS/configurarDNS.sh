@@ -5,11 +5,6 @@ web=192.168.10.253
 openldap192.168.10.149
 nfs=192.168.10.101
 
-echo "key \"rndc-key\" {" > /etc/rndc.key
-echo "        algorithm hmac-md5;" >> /etc/rndc.key
-echo "        secret "DTngw5O8I5Axx631GjQ9pA==";" >> /etc/rndc.key
-echo "};" >> /etc/rndc.key
-
 rm /etc/namedb/*
 rm /etc/named.conf
 
