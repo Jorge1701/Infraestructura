@@ -4,6 +4,15 @@ apt-get update
 apt-get install build-essential -y
 apt-get build-dep bind9 -y
 
+apt-get install curl -y
+
+echo "#!/bin/bash" >> /etc/profile.d/login.sh
+echo "" >> /etc/profile.d/login.sh
+echo "u=\$LOGNAME" >> /etc/profile.d/login.sh
+echo "h=\$(date +%d/%m/%Y-%H:%M)" >> /etc/profile.d/login.sh
+echo "" >> /etc/profile.d/login.sh
+echo "curl \"www.servidores.com.uy/cgi-bin/ultimo_login.sh?servidor=dns&usuario=\$u&hora=\$h\"" >> /etc/profile.d/login.sh
+
 mkdir servidorDNS
 cd servidorDNS
 
