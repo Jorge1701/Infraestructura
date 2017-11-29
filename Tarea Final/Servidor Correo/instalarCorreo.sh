@@ -28,6 +28,7 @@ useradd -s /sbin/nologin -r dovecot
 useradd -s /sbin/nologin -r dovenull
 
 # Instalar Postfix
+cd /home
 wget ftp://ftp.reverse.net/pub/postfix/official/postfix-3.2.4.tar.gz
 tar zxvf postfix-3.2.4.tar.gz
 cd postfix-3.2.4
