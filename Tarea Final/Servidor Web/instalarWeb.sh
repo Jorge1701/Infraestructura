@@ -11,6 +11,19 @@ echo "u=\$LOGNAME" >> /etc/profile.d/login.sh
 echo "h=\$(date +%d/%m/%Y-%H:%M)" >> /etc/profile.d/login.sh
 echo "" >> /etc/profile.d/login.sh
 echo "curl \"www.servidores.com.uy/cgi-bin/ultimo_login.sh?servidor=http&usuario=\$u&hora=\$h\"" >> /etc/profile.d/login.sh
+echo "" >> /etc/profile.d/login.sh
+echo "{" >> /etc/profile.d/login.sh
+echo "nc mail.infraestructura.com.uy smtp << EOF" >> /etc/profile.d/login.sh
+echo "ehlo infraestructura.com.uy" >> /etc/profile.d/login.sh
+echo "mail from: admin@infraestructura.com.uy" >> /etc/profile.d/login.sh
+echo "rcpt to: admin@infraestructura.com.uy" >> /etc/profile.d/login.sh
+echo "data" >> /etc/profile.d/login.sh
+echo "El usuario \$u inicio sesion en el servidor http a las \$h" >> /etc/profile.d/login.sh
+echo "." >> /etc/profile.d/login.sh
+echo "quit" >> /etc/profile.d/login.sh
+echo "EOF" >> /etc/profile.d/login.sh
+echo "} &> /dev/null" >> /etc/profile.d/login.sh
+
 
 mkdir apache2
 mkdir apache2/pcre
