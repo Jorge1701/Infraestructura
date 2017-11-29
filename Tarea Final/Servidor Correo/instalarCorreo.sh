@@ -42,3 +42,5 @@ useradd postfix -g postfix -s /bin/false
 make
 make install
 # 17
+# mv /usr/sbin/sendmail /usr/sbin/sendmail.cp
+# cp /usr/lib/sendmail /usr/sbin/sendmail
