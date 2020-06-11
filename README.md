@@ -6,4 +6,4 @@
 
 2. Documentacion para configurar ciertas funcionalidades de los mismos.
 
-3. Documentacion para hacer funcionar ejercicios propuestos en la clase de **Administracion de Infraestructuras** del 2017 del TIP.
+3. Documentacion para hacer funcionar ejercicios propuestos en la clase de **Administracion de Infraestructuras** del 2017 del Tecnólogo en Informática Paysandú.
